@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIS</title>
+</head>
+<body>
+    <h1>qual o pais</h1>
+    <label for="txt-n">Em qual pais você mora? </label>
+    <input type="text" name="txtn" id="txt-n">
+    <button id="btn-v">verificar</button>
+    <div id="res">
+    </div>
+    <script>
+        window.document.getElementById('btn-v').addEventListener("click", verificar);
+        
+        function verificar(){
+            var p = window.document.getElementById('txt-n');
+            var res = window.document.getElementById('res');
+            if(p.value == 'Brasil'){
+                res.innerHTML = `<p> Você é <strong>Brasieliro</strong></p>`;
+            }else{
+                res.innerHTML = `<p> Você é <strong>Estrangeiro</strong></p>`;
+            }
+        }
+    </script>
+</body>
+</html>
